@@ -1,0 +1,477 @@
+@font-face {  
+    font-family: 'Candara';  
+    src: url('fonts/CANDARA.TTF') format('ttf'), url('fonts/CANDARAB.TTF') format('ttf'),url('fonts/CANDARAI.TTF') format('ttf'),url('fonts/CANDARAL.TTF') format('ttf'),url('fonts/CANDARALI.TTF') format('ttf'), url('fonts/CANDARAZ.TTF') format('ttf');  
+} 
+
+*{
+    font-family: "Candara";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #1B1B1B;
+}
+
+.container{
+    max-width: 1600px;
+    min-width: 1200px;
+    /* Общий отступ 20px по бокам */
+    padding: 0 20px;
+    margin: 0 auto;
+    /* Выравнивание по левой стороне */
+    text-align: left;
+}
+
+body{
+    background: #F8F8F8;
+    color: #1B1B1B;
+}
+
+/* меню */
+.menu {
+    padding: 20px 0; /* Отступ сверху и снизу 20px */
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    /* Плоский дизайн - без теней */
+}
+
+.menu__top {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Растягиваем для работы space-between */
+    justify-content: space-between; /* Автоматическое расстояние между лого и кнопкой */
+}
+
+.menu__link {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Стилизация кнопки в меню (второй элемент списка) */
+.menu__top li:nth-child(2) .menu__link {
+    background: #8E1094; /* Акцентный цвет */
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 40px; /* Скругление 40px */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.menu__top li:nth-child(2) .menu__link:hover {
+    transform: scale(1.05); /* Анимация при наведении */
+}
+
+.logo {
+    height: 40px;
+}
+
+/* основной контент */
+.main__content {
+    text-align: left; /* Выравнивание по левому краю */
+    padding: 80px 40px; /* Отступы внутри блока (верх/низ 80, бока 40) */
+    background: linear-gradient(135deg, #8E1094 0%, #6B0D6F 100%); /* Акцентный градиент */
+    color: #FFFFFF;
+    margin-top: 40px; /* Отступ от блока с меню 40px */
+    border-radius: 40px; /* Скругление 40px */
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    /* Выравнивание по левому краю */
+    margin: 0 0 30px 0;
+}
+
+.btn {
+    background: #FFFFFF;
+    color: #8E1094; /* Акцентный цвет */
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 40px; /* Скругление 40px */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Анимация при наведении */
+}
+
+/* преимущества */
+.subtitle {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1B1B1B;
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.advantages__card {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 40px; /* Скругление 40px */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.advantages__card:hover {
+    transform: scale(1.05); /* Анимация при наведении */
+}
+
+.advantages__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.smalltitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #8E1094; /* Акцентный цвет */
+}
+
+/* история компании */
+.history__company {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 40px; /* Скругление 40px */
+    margin: 30px auto;
+    display: block;
+}
+
+/* футер */
+.footer {
+    background: #1B1B1B;
+    color: #FFFFFF;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer__logo {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.footer .text {
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+/* Стилизация форм */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto; /* Центрируем блок формы и добавляем отступ сверху */
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 40px; /* Скругление 40px */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* Легкая тень для отделения */
+    text-align: left; /* Выравнивание контента формы по левому краю */
+}
+
+.form-container h1 {
+    text-align: center; /* Заголовок формы по центру */
+    color: #1B1B1B;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1B1B1B;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 40px; /* Скругление 40px */
+    font-size: 16px;
+    box-sizing: border-box; /* Учитываем padding в размере */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="email"]:focus {
+    outline: none;
+    border-color: #8E1094; /* Акцентный цвет при фокусе */
+}
+
+.form-container button[type="submit"] {
+    background: #8E1094; /* Акцентный цвет */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 40px; /* Скругление 40px */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+    display: block; /* Кнопка на всю ширину */
+    width: 100%;
+}
+
+.form-container button[type="submit"]:hover {
+    transform: scale(1.02); /* Легкая анимация при наведении */
+}
+
+/* Стили для сообщений об ошибке/успехе */
+.error {
+    color: #D32F2F; /* Красный цвет для ошибок */
+    background-color: #FFEBEE; /* Светло-красный фон */
+    border: 1px solid #FFCDD2;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.success {
+    color: #388E3C; /* Зеленый цвет для успеха */
+    background-color: #E8F5E9; /* Светло-зеленый фон */
+    border: 1px solid #C8E6C9;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Стили для навигации под формой */
+.nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav a {
+    color: #8E1094; /* Акцентный цвет для ссылок */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Анимация цвета при наведении */
+}
+
+.nav a:hover {
+    color: #6B0D6F; /* Более темный акцентный цвет при наведении */
+}
+
+/* Адаптив для мобильных устройств */
+@media screen and (max-width: 390px) {
+    .container {
+        min-width: unset; /* Сбрасываем min-width */
+        padding: 0 15px; /* Отступ 15px по бокам на мобильных */
+    }
+
+    .menu {
+        padding: 15px 0; /* Уменьшенный отступ сверху/снизу на мобильных */
+    }
+
+    .menu__link {
+        font-size: 14px;
+    }
+
+    .menu__top li:nth-child(2) .menu__link {
+        padding: 8px 16px;
+    }
+
+    .main__content {
+        padding: 40px 15px; /* Отступы на мобильных */
+        margin-top: 20px; /* Уменьшенный отступ сверху */
+        border-radius: 20px; /* Уменьшенное скругление на мобильных */
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 30px; /* Уменьшенное скругление на мобильных */
+    }
+
+    .advantages {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+        gap: 20px;
+    }
+
+    .advantages__card {
+         border-radius: 20px; /* Уменьшенное скругление на мобильных */
+    }
+
+    .subtitle {
+        font-size: 28px;
+    }
+
+    .smalltitle {
+        font-size: 20px;
+    }
+    
+    .history__company {
+        border-radius: 20px; /* Уменьшенное скругление на мобильных */
+    }
+    
+    .footer {
+        padding: 30px 0; /* Уменьшенный отступ в футере */
+        margin-top: 40px; /* Уменьшенный отступ сверху */
+    }
+    
+    /* Адаптив для форм и навигации на мобильных */
+    .form-container {
+        margin: 20px auto; /* Уменьшенный отступ сверху */
+        padding: 20px; /* Уменьшенные отступы внутри */
+        border-radius: 20px; /* Уменьшенное скругление */
+    }
+    
+    .form-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="email"] {
+        padding: 10px 15px; /* Меньшие отступы на мобильных */
+        font-size: 14px;
+        border-radius: 30px; /* Меньшее скругление на мобильных */
+    }
+    
+    .form-container button[type="submit"] {
+        padding: 12px 30px; /* Меньшие отступы на мобильных */
+        font-size: 16px;
+        border-radius: 30px; /* Меньшее скругление на мобильных */
+    }
+    
+    .nav a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+}
+
+/* Стили для списка карточек (например, на модерации или в архиве) */
+.card-list {
+    display: grid;
+    gap: 20px; /* Расстояние между карточками */
+    margin-top: 30px;
+}
+
+.card {
+    background: #FFFFFF;
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 20px; /* Скругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Легкая тень для плоского дизайна */
+    border: 1px solid #EEEEEE; /* Легкая граница */
+}
+
+.card h3 {
+    color: #8E1094; /* Акцентный цвет для заголовка */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.card strong {
+    color: #1B1B1B;
+}
+
+.card .actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.card .actions .btn {
+    /* Стили кнопки уже определены */
+    margin-bottom: 10px; /* Отступ между кнопками */
+}
+
+.card .actions textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px; /* Скругление для текстового поля */
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    resize: vertical; /* Разрешить изменение размера по вертикали */
+}
+
+/* Адаптив для карточек на мобильных устройствах */
+@media screen and (max-width: 390px) {
+    .card {
+        padding: 15px; /* Уменьшенные отступы */
+        border-radius: 15px; /* Уменьшенное скругление */
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .card .actions {
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+
+    .card .actions .btn {
+        padding: 10px 20px; /* Уменьшенные отступы кнопок */
+        font-size: 14px;
+    }
+
+    .card .actions textarea {
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+}
